@@ -240,6 +240,26 @@ body {
   font-size: .75rem;
 }
 
+.btn-reset-app {
+  display: block;
+  margin: .5rem auto 0;
+  background: none;
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-size: .7rem;
+  font-family: var(--font-ui);
+  cursor: pointer;
+  padding: .25rem .6rem;
+  border-radius: var(--radius);
+  transition: color var(--transition), border-color var(--transition);
+  opacity: .6;
+}
+.btn-reset-app:hover {
+  color: var(--red-err);
+  border-color: var(--red-err);
+  opacity: 1;
+}
+
 /* ── Practice header ───────────────────────────────────────────────────────── */
 .practice-header {
   background: var(--burgundy);

@@ -28,7 +28,7 @@ export const TEXTS = [
       { id: 'im_02', text: 'joka olet',              type: 'rel'  },
       { id: 'im_03', text: 'taivaissa.',             type: 'prep' },
       { id: 'im_04', text: 'Pyhitetty olkoon',       type: 'imp'  },
-      { id: 'im_05', text: 'sinun nimesi.',           type: 'noun' },
+      { id: 'im_05', text: 'sinun nimesi.',          type: 'noun' },
       { id: 'im_06', text: 'Tulkoon sinun',          type: 'verb' },
       { id: 'im_07', text: 'valtakuntasi.',          type: 'noun' },
       { id: 'im_08', text: 'Tapahtukoon sinun',      type: 'imp'  },

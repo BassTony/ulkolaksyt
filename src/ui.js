@@ -329,6 +329,27 @@ document.getElementById('btn-show-fulltext').addEventListener('click', () => {
   btn.textContent = open ? 'Sulje teksti ↑' : 'Katso koko teksti ↓'
 })
 
+// ── App reset ─────────────────────────────────────────────────────────────────
+
+document.getElementById('btn-reset-app').addEventListener('click', async () => {
+  if (!confirm('Nollataan kaikki edistyminen ja tyhjennetään sovelluksen välimuisti?\n\nTätä ei voi peruuttaa.')) return
+
+  // Clear all localStorage
+  localStorage.clear()
+
+  // Unregister service workers and clear all caches
+  if ('serviceWorker' in navigator) {
+    const regs = await navigator.serviceWorker.getRegistrations()
+    await Promise.all(regs.map(r => r.unregister()))
+  }
+  if ('caches' in window) {
+    const keys = await caches.keys()
+    await Promise.all(keys.map(k => caches.delete(k)))
+  }
+
+  location.reload()
+})
+
 // ── Keyboard shortcuts ─────────────────────────────────────────────────────────
 
 document.addEventListener('keydown', e => {
