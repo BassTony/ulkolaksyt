@@ -43,7 +43,11 @@
 
     <main class="practice-main">
       <!-- Upper pane: the text being built -->
-      <div id="upper-pane" class="upper-pane" aria-live="polite" aria-label="Rakentuva teksti"></div>
+      <div class="upper-pane-wrap">
+        <div id="scroll-hint-up"   class="scroll-hint scroll-hint-up">↑</div>
+        <div id="upper-pane" class="upper-pane" aria-live="polite" aria-label="Rakentuva teksti"></div>
+        <div id="scroll-hint-down" class="scroll-hint scroll-hint-down">↓</div>
+      </div>
 
       <!-- Lower pane: choices -->
       <div id="lower-pane" class="lower-pane" role="group" aria-label="Valitse seuraava pala"></div>
@@ -57,13 +61,18 @@
       <div class="completion-ornament" aria-hidden="true">✝</div>
       <h2 id="completion-title"></h2>
       <p id="completion-msg" class="completion-msg"></p>
-      <p id="completion-errors" class="completion-errors"></p>
+      <div id="completion-errors" class="completion-errors"></div>
       <div class="completion-actions">
         <button id="btn-completion-retry" class="btn-primary">Uudelleen</button>
         <button id="btn-completion-menu" class="btn-secondary">Valikkoon</button>
       </div>
+      <button id="btn-show-fulltext" class="btn-fulltext-toggle">Katso koko teksti ↓</button>
+      <div id="completion-fulltext" class="completion-fulltext" hidden></div>
     </main>
   </div>
+
+  <!-- Floating stopwatch — shown during practice only -->
+  <div id="timer" class="timer" aria-live="polite" aria-label="Kulunut aika"></div>
 
   <script type="module" src="/src/main.js"></script>
 </body>
