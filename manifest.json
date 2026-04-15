@@ -1,0 +1,21 @@
+{
+  "name": "Ulkoläksyt",
+  "short_name": "Ulkoläksyt",
+  "description": "Harjoittele konfirmaation ulkolukutekstit sydämeesi.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F5ECD7",
+  "theme_color": "#6B1A2A",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

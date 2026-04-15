@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6B1A2A" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Ulkoläksyt</title>
+</head>
+<body>
+
+  <!-- ── Menu ──────────────────────────────────────────────────────────────── -->
+  <div id="screen-menu" class="screen active">
+    <header class="app-header">
+      <div class="cross-ornament" aria-hidden="true">✝</div>
+      <h1>Ulkoläksyt</h1>
+      <p class="app-tagline">Harjoittele konfirmaation ulkolukutekstit sydämeesi.</p>
+    </header>
+    <main>
+      <div id="text-list" class="text-list"></div>
+    </main>
+    <footer class="app-footer">
+      <small>Valitse teksti ja ala kokoamaan!</small>
+    </footer>
+  </div>
+
+  <!-- ── Practice ──────────────────────────────────────────────────────────── -->
+  <div id="screen-practice" class="screen">
+    <header class="practice-header">
+      <button id="btn-back" class="btn-icon" aria-label="Takaisin valikkoon">←</button>
+      <div class="practice-title-group">
+        <h2 id="practice-title"></h2>
+        <span id="practice-subtitle" class="practice-subtitle"></span>
+      </div>
+    </header>
+
+    <div class="progress-bar-wrap">
+      <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <span id="progress-label" class="progress-label"></span>
+    </div>
+
+    <main class="practice-main">
+      <!-- Upper pane: the text being built -->
+      <div id="upper-pane" class="upper-pane" aria-live="polite" aria-label="Rakentuva teksti"></div>
+
+      <!-- Lower pane: choices -->
+      <div id="lower-pane" class="lower-pane" role="group" aria-label="Valitse seuraava pala"></div>
+      <p class="keyboard-hint" aria-hidden="true">Näppäimet 1–3 valitsevat vaihtoehdon</p>
+    </main>
+  </div>
+
+  <!-- ── Completion ─────────────────────────────────────────────────────────── -->
+  <div id="screen-completion" class="screen">
+    <main class="completion-main">
+      <div class="completion-ornament" aria-hidden="true">✝</div>
+      <h2 id="completion-title"></h2>
+      <p id="completion-msg" class="completion-msg"></p>
+      <p id="completion-errors" class="completion-errors"></p>
+      <div class="completion-actions">
+        <button id="btn-completion-retry" class="btn-primary">Uudelleen</button>
+        <button id="btn-completion-menu" class="btn-secondary">Valikkoon</button>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
