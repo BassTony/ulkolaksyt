@@ -100,7 +100,7 @@ export const TEXTS = [
       { id: 'ap_31', text: 'Isän',                   type: 'name' },
       { id: 'ap_32', text: 'Kaikkivaltiaan,',        type: 'adj'  },
       { id: 'ap_33', text: 'oikealla puolella,',     type: 'prep' },
-      { id: 'ap_34', text: 'on sieltä tuleva',       type: 'verb' },
+      { id: 'ap_34', text: 'ja on sieltä tuleva',       type: 'verb' },
       { id: 'ap_35', text: 'tuomitsemaan',           type: 'verb' },
       { id: 'ap_36', text: 'eläviä',                 type: 'adj'  },
       { id: 'ap_37', text: 'ja kuolleita,',          type: 'conj' },
